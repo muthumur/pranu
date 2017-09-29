@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+    <display-name>OEP</display-name>
+  <resource-ref>
+    <description>OEP DB</description>
+    <res-ref-name>jdbc/oep</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+ 
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.intellion.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>UserController</servlet-name>
+    <servlet-class>com.intellion.controller.UserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserController</servlet-name>
+    <url-pattern>/AddUser</url-pattern>
+  </servlet-mapping>
+   
+<servlet>
+    <servlet-name>ExamController</servlet-name>
+    <servlet-class>com.intellion.controller.ExamController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ExamController</servlet-name>
+    <url-pattern>/AddExam</url-pattern>
+  </servlet-mapping>  
+  
+  <servlet>
+    <servlet-name>QuestionController</servlet-name>
+    <servlet-class>com.intellion.controller.QuestionController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>QuestionController</servlet-name>
+    <url-pattern>/AddQues</url-pattern>
+  </servlet-mapping>  
+   
+    <servlet>
+    <servlet-name>SearchQuesController</servlet-name>
+    <servlet-class>com.intellion.controller.SearchQuesController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchQuesController</servlet-name>
+    <url-pattern>/SearchQues</url-pattern>
+  </servlet-mapping>
+   
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
